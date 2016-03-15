@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="index" location="98,23" size="203,211">
+    <action name="index" location="46,60" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="index.jsp" />
+      </result>
+    </action>
+    <action name="login" location="46,102" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="index.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="login.html" />
+      </result>
+    </action>
+    <action name="logout" location="46,163" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="index.html" />
+      </result>
+    </action>
+  </package>
+  <package name="course" location="17,309" size="205,231">
+    <action name="courseSearchByName" location="35,49" size="169,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="courseSearchByName.jsp" />
+      </result>
+    </action>
+    <action name="courseInformation" location="36,97" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="courseInformation.jsp" />
+      </result>
+    </action>
+    <action name="courseSearchByUserId" location="37,143" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="myCourse.jsp" />
+      </result>
+    </action>
+    <action name="enterCourse" location="41,189" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="enterCourse.jsp" />
+      </result>
+    </action>
+  </package>
+  <package name="resource" location="17,557" size="181,241">
+    <action name="enterResource" location="29,40" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="enterResource.jsp" />
+      </result>
+    </action>
+    <action name="uploadResource" location="28,81" size="150,40" />
+    <action name="downloadResource" location="27,120" size="150,40" />
+    <action name="SearchResource" location="26,158" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="searchResource.jsp" />
+      </result>
+    </action>
+    <action name="deleteResource" location="27,200" size="150,40" />
+  </package>
+  <package name="question" location="17,804" size="182,322">
+    <action name="questionByCourseID" location="6,28" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="questionByCourseID.jsp" />
+      </result>
+    </action>
+    <action name="raiseQuestion" location="14,70" size="150,40" />
+    <action name="enterQuestion" location="14,120" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="enterQuestion.jsp" />
+      </result>
+    </action>
+    <action name="replyQuestion" location="15,166" size="150,41">
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="login.html" />
+      </result>
+    </action>
+    <action name="deleteQuestion" location="11,221" size="150,40" />
+    <action name="unReadReply" location="12,263" size="150,41">
+      <result name="success" />
+    </action>
+  </package>
+  <package name="announcement" location="16,1341" size="188,130">
+    <action name="announcementGet" location="28,39" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="announcementGet.jsp" />
+      </result>
+    </action>
+    <action name="announcementSet" location="27,80" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="announcementSet.jsp" />
+      </result>
+    </action>
+  </package>
+  <package name="assignment" location="10,1121" size="184,262">
+    <action name="enterAssignment" location="30,48" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="enterAssignment.jsp" />
+      </result>
+    </action>
+    <action name="downloadAssignment" location="30,92" size="150,40" />
+    <action name="deliveryAssignment" location="29,134" size="150,40" />
+    <action name="uploadAssignment" location="28,175" size="150,40" />
+    <action name="deleteAssignment" location="32,220" size="150,40" />
+  </package>
+  <webResource name="index.jsp" path="WEB-INF/page/index/index.jsp" location="479,23" size="150,55" />
+  <webResource name="login.html" path="WEB-INF/page/login.html" location="470,135" size="150,55" />
+  <webResource name="index.html" path="WEB-INF/page/index.html" location="471,80" size="150,55" />
+  <webResource name="courseSearchByName.jsp" path="WEB-INF/page/course/courseSearchByName.jsp" location="339,364" size="150,55" />
+  <webResource name="courseInformation.jsp" path="WEB-INF/page/course/courseInformation.jsp" location="339,306" size="150,55" />
+  <webResource name="myCourse.jsp" path="WEB-INF/page/course/myCourse.jsp" location="339,479" size="150,55" />
+  <webResource name="enterCourse.jsp" path="WEB-INF/page/course/enterCourse.jsp" location="339,421" size="150,55" />
+  <webResource name="index.jsp" path="/WEB-INF/page/index/index.jsp" location="500,500" size="150,55" />
+  <webResource name="login.html" path="/login.html" location="200,650" size="150,55" />
+  <webResource name="index.html" path="/index.html" location="500,650" size="150,55" />
+  <webResource name="courseSearchByName.jsp" path="/WEB-INF/page/course/courseSearchByName.jsp" location="200,800" size="150,55" />
+  <webResource name="courseInformation.jsp" path="/WEB-INF/page/course/courseInformation.jsp" location="500,800" size="150,55" />
+  <webResource name="myCourse.jsp" path="/WEB-INF/page/course/myCourse.jsp" location="200,950" size="150,55" />
+  <webResource name="enterCourse.jsp" path="/WEB-INF/page/course/enterCourse.jsp" location="500,950" size="150,55" />
+  <webResource name="enterResource.jsp" path="/WEB-INF/page/resource/enterResource.jsp" location="350,1100" size="150,55" />
+  <webResource name="searchResource.jsp" path="/WEB-INF/page/resource/searchResource.jsp" location="350,1250" size="150,55" />
+  <webResource name="questionByCourseID.jsp" path="/WEB-INF/page/question/questionByCourseID.jsp" location="350,1400" size="150,55" />
+  <webResource name="enterQuestion.jsp" path="/WEB-INF/page/question/enterQuestion.jsp" location="50,1550" size="150,55" />
+  <webResource name="announcementGet.jsp" path="/WEB-INF/page/announcement/announcementGet.jsp" location="650,1100" size="150,55" />
+  <webResource name="announcementSet.jsp" path="/WEB-INF/page/announcement/announcementSet.jsp" location="650,1250" size="150,55" />
+  <webResource name="enterAssignment.jsp" path="/WEB-INF/page/assignment/enterAssignment.jsp" location="650,1400" size="150,55" />
+</Struts2Diagram>
+

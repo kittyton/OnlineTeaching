@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+
+	<table name="userinfo" catalog="onlineteaching"
+		class="com.teaching.model.User">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="teacherinfo" catalog="onlineteaching"
+		class="com.teaching.model.Teacher">
+	</table>
+	<table name="tainfo" catalog="onlineteaching"
+		class="com.teaching.model.CourseTA">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="studentinfo" catalog="onlineteaching"
+		class="com.teaching.model.Student">
+	</table>
+	<table name="resourseinfo" catalog="onlineteaching"
+		class="com.teaching.model.Resource">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="publicreplyinfo" catalog="onlineteaching"
+		class="com.teaching.model.Reply">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="publicquestioninfo" catalog="onlineteaching"
+		class="com.teaching.model.Question">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="deliveryinfo" catalog="onlineteaching"
+		class="com.teaching.model.Delivery">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="courseteacher" catalog="onlineteaching"
+		class="com.teaching.model.CourseTeacher">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="coursestudent" catalog="onlineteaching"
+		class="com.teaching.model.CourseStudent">
+		<primary-key>
+			<generator class="increment"></generator>
+
+
+
+			<key-column name="sStudentID" />
+		</primary-key>
+	</table>
+	<table name="courseinfo" catalog="onlineteaching"
+		class="com.teaching.model.Course">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="assignmentinfo" catalog="onlineteaching"
+		class="com.teaching.model.Assignment">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="announcementinfo" catalog="onlineteaching"
+		class="com.teaching.model.Announcement">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="admininfo" catalog="onlineteaching"
+		class="com.teaching.model.Administrator">
+	</table>
+<table name="unreadreply" catalog="onlineteaching"
+	class="com.teaching.model.UnReadReply">
+	<primary-key>
+		<generator class="increment"></generator>
+	</primary-key>
+</table>
+</hibernate-reverse-engineering>

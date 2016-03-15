@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+	<package name="index" namespace="/" extends="struts-default">
+		<action name="index" class="com.teaching.action.index.Index" method="execute">
+			<result name="success">/WEB-INF/page/index/index.jsp</result>
+		</action>
+		<action name="login" class="com.teaching.action.index.Login">
+			<result name="success">/WEB-INF/page/index/index.jsp</result>
+			<result name="error">/login.html</result>
+		</action>
+		<action name="logout" class="com.teaching.action.index.Logout">
+			<result name="success">/index.html</result>
+		</action>
+	</package>
+
+	<package name="course" namespace="/course" extends="struts-default">
+		<action name="courseSearchByName" class="com.teaching.action.course.CourseSearchByName">
+			<result name="success">/WEB-INF/page/course/courseSearchByName.jsp</result>
+		</action>
+		<action name="courseInformation" class="com.teaching.action.course.CourseInformation">
+			<result name="success">/WEB-INF/page/course/courseInformation.jsp</result>
+		</action>
+		<action name="courseSearchByUserId" class="com.teaching.action.course.CourseSearchByUserId">
+			<result name="success">/WEB-INF/page/course/myCourse.jsp</result>
+		</action>
+		<action name="enterCourse" class="com.teaching.action.course.EnterCourse">
+			<result name="success">/WEB-INF/page/course/enterCourse.jsp</result>
+		</action>
+	</package>
+	<package name="resource" namespace="/resource" extends="struts-default">
+		<action name="enterResource" class="com.teaching.action.resource.EnterResource">
+			<result name="success">/WEB-INF/page/resource/enterResource.jsp</result>
+		</action>
+		<action name="uploadResource" class="com.teaching.action.resource.UploadResource">
+		</action>
+		<action name="downloadResource" class="com.teaching.action.resource.DownloadResource"></action>
+		<action name="SearchResource" class="com.teaching.action.resource.SearchResource">
+			<result name="success">/WEB-INF/page/resource/searchResource.jsp</result>
+		</action>
+		<action name="deleteResource" class="com.teaching.action.resource.DeleteResource"></action></package>
+	<package name="question" namespace="/question" extends="struts-default">
+		<action name="questionByCourseID" class="com.teaching.action.question.QuestionByCourseID">
+		<param name="courseID"></param>
+			<result name="success">/WEB-INF/page/question/questionByCourseID.jsp</result>
+		</action>
+		<action name="raiseQuestion" class="com.teaching.action.question.RaiseQuestion">
+			
+		</action>
+		<action name="enterQuestion" class="com.teaching.action.question.EnterQuestion">
+			<result name="success">/WEB-INF/page/question/enterQuestion.jsp</result>
+		</action>
+		<action name="replyQuestion" class="com.teaching.action.question.ReplyQuestion">
+			<result type="chain" name="success">enterQuestion</result>
+			<result name="error">/login.html</result>
+		</action>
+		<action name="deleteQuestion" class="com.teaching.action.question.DeleteQuestion">
+		</action>
+
+	</package>
+	<package name="announcement" namespace="/announcement" extends="struts-default">
+		<action name="announcementGet" class="com.teaching.action.announcement.AnnouncementGet">
+			<result name="success">/WEB-INF/page/announcement/announcementGet.jsp</result>
+		</action>
+		<action name="announcementSet" class="com.teaching.action.announcement.AnnouncementSet">
+			<result name="success">/WEB-INF/page/announcement/announcementSet.jsp</result>
+		</action>
+		</package>
+	<package name="assignment" namespace="/assignment" extends="struts-default">
+		<action name="enterAssignment" class="com.teaching.action.assignment.enterAssignment">
+			<result name="success">/WEB-INF/page/assignment/enterAssignment.jsp</result>
+		</action>
+		<action name="downloadAssignment" class="com.teaching.action.assignment.DownloadAssignment">
+		</action>
+		<action name="deliveryAssignment" class="com.teaching.action.assignment.DeliveryAssignment">
+		</action>
+		<action name="uploadAssignment" class="com.teaching.action.assignment.UploadAssignment">
+		</action>
+		<action name="deleteAssignment" class="com.teaching.action.assignment.DeleteAssignment">
+		</action>
+	</package>
+	<package name="Json" namespace="/json" extends="json-default">
+		<action name="unReadReply" class="com.teaching.action.question.UnReadReply">
+			<result type="json"/>
+		</action>
+	</package></struts>
